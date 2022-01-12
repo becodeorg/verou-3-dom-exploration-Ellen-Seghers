@@ -5,7 +5,7 @@ var studentNames = ['Ahmad', 'Jian', 'Michael', 'Dante', 'Muhammet', 'Nicolas', 
 var randomNames = [];
 var numberNames = studentNames.length;
 for(var i = 0; i < numberNames; i++){
-	var rand = Math.floor(Math.random() * (studentNames.length -1));
+	var rand = Math.floor(Math.random() * (studentNames.length));
 	randomNames.push(studentNames.splice(rand, 1));
 }
 
