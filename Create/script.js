@@ -22,7 +22,7 @@ for(var i = 0; i < randomNames.length; i++){
 
 	newSection.append(newParagraph);
 	articleVar.append(newSection);
-	console.log(newSection);
+	console.log(newSection); 
 }
 
 function colorpicker() {
