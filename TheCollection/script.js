@@ -54,7 +54,7 @@ const collection = [{
 	},
 	{
 		name: 'Linkin Park',
-		genre: ['Alternative Rock', 'Alternative Metal', 'Raprock', ],
+		genre: ['Alternative Rock', 'Raprock', 'Alternative Metal', ],
 		yearsActive: '1999-2017',
 		country: 'Caliornië',
 		picture: "linkin_park1-e1424877421108.jpg",
@@ -63,7 +63,7 @@ const collection = [{
 	},
 	{
 		name: 'Adam Lambert',
-		genre: ['Pop', 'Poprock', 'Rock', 'Glamrock'],
+		genre: ['Pop', 'Poprock', 'Rock', 'Glamrock',],
 		yearsActive: '2009-today',
 		country: 'United States',
 		picture: "XH39QExJJYi6JUeain84wE.jpg",
