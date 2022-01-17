@@ -1,14 +1,14 @@
-//TODO: Select the selector
-const section = document.querySelector('section');
-const sectionsChildren = section.children
-console.log(sectionsChildren) // [<h2> <p> <p>]
+//Select the element
+const orderList = document.querySelector('ol');
+const sectionsChildren = orderList.children
+console.log(sectionsChildren) // [<li> <li> <li> <li> <li>]
 
-//TODO: Slect the last child of the <OL> tag
+//Select the last child of the <OL> tag
+const lastChild = sectionsChildren[4];
+console.log(lastChild);
 
+//put the last child of <ol> at the beginning of the list
+const firstChild = sectionsChildren[0];
+orderList.insertBefore(lastChild, firstChild);
 
-//TODO: Get the element that comes after the third child (<p>)
-
-
-
-//TODO: put the last child of <ol> at the beginning of the list
 
