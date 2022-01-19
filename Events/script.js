@@ -6,11 +6,13 @@ function getElapsedTime(){
     return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
 }
 
-function clickOnSquare(event){
-    console.log(event.target.classList[1]);
-    console.log(getElapsedTime());
+function clickedAgain(event){
+    alert(event.target.classList[1]);
+}
 
-    //create a new div and giv it a class name (select the location where you want to add it first)
+function clickOnSquare(event){
+
+    //create a new div and give it a class name (select the location where you want to add it first)
     const containerSection = document.querySelector(".displayedsquare-wrapper");
     const div = document.createElement("div");
     div.classList.add("displayedsquare");
@@ -18,7 +20,26 @@ function clickOnSquare(event){
 
     const color = event.target.classList[1];
     div.classList.add(color);
+    div.addEventListener("click", clickedAgain);
+
+    //create a new <li>
+    const sections = document.querySelectorAll("section");
+    const li = document.createElement("li");
+    li.innerText = getElapsedTime() +": the clicked button has color: " + event.target.classList[1];
+    sections[sections.length -1].append(li);
 }
+
+//TODO: add a background color that changed when you press space bar
+function keyPressed(event){
+    console.log(event.keyCode);
+    switch(event.keyCode){
+        case 32: event.target.style.backgroundColor = "red";
+        break;
+    }
+}
+
+const body = document.querySelector("body");
+body.addEventListener("keypress", keyPressed);
 
 const actionsquares = document.querySelectorAll('.actionsquare');
 for(let actionsquare of actionsquares){
