@@ -23,7 +23,7 @@ function getAge(){
 }
 ageInput.addEventListener("keyup", getAge);
 
-//TODO: Add a key up listener on the both fields if the password is too short then let show it red. Or if both passwords don't match
+//Add a key up listener on the both fields if the password is too short then let show it red. Or if both passwords don't match
 
     //Get your password fields out of your HTML
     const passwordInput = document.getElementById("pwd");
@@ -40,5 +40,15 @@ ageInput.addEventListener("keyup", getAge);
         }
         else {
             passwordInput.style.color = "";
+        }
+    }
+
+    //Add a function that shows the password confirm red when the passwords are not matching
+    function passwordMatches(){
+        if(passwordConfirm.value != passwordInput.value){
+            passwordConfirm.style.color = "red";
+        }
+        else {
+            passwordConfirm.style.color = "";
         }
     }
