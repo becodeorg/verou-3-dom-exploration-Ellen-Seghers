@@ -29,13 +29,22 @@ function clickOnSquare(event){
     sections[sections.length -1].append(li);
 }
 
-//TODO: add a background color that changed when you press space bar
+//add a background color that changed when you press space bar
 function keyPressed(event){
     console.log(event.keyCode);
     switch(event.keyCode){
-        case 32: event.target.style.backgroundColor = "red";
+        case 32: event.target.style.backgroundColor = colorpicker();
         break;
     }
+}
+
+function colorpicker() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
 
 const body = document.querySelector("body");
