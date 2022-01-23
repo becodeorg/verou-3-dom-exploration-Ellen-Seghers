@@ -33,7 +33,9 @@ ageInput.addEventListener("keyup", getAge);
     passwordInput.addEventListener("keyup", passwordVerified);
     passwordConfirm.addEventListener("keyup", passwordMatches);
 
-    //Add a function that shows the password red when it's shorter then 6 characters.
+    /**
+     * Add a function that shows the password red when it's shorter then 6 characters.
+     */
     function passwordVerified(){
         if(passwordInput.value.length < 6){
             passwordInput.style.color = "red";
@@ -43,12 +45,36 @@ ageInput.addEventListener("keyup", getAge);
         }
     }
 
-    //Add a function that shows the password confirm red when the passwords are not matching
+    /**
+     * Add a function that shows the password confirm red when the passwords are not matching
+     */
     function passwordMatches(){
         if(passwordConfirm.value != passwordInput.value){
             passwordConfirm.style.color = "red";
         }
         else {
             passwordConfirm.style.color = "";
+        }
+    }
+
+//toggle page to dark mode if dark mode is selected and normal mode if light mode is selected
+
+    //Get the select element out the HTML
+    const darkmodeToggler = document.getElementById("toggle-darkmode");
+
+    //Add a event listener to see when the elements value changes (change)
+    darkmodeToggler.addEventListener("change", toggleMode);
+
+    /**
+     * Add a function that toggles the mode between light and dark
+     */
+    function toggleMode(){
+        if(darkmodeToggler.value == "light"){
+            document.body.style.backgroundColor = "";
+            document.body.style.color = "";
+        }
+        else {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
         }
     }
