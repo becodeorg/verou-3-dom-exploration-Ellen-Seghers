@@ -5,5 +5,6 @@
     <mapping directory="$PROJECT_DIR$/CasinoGames" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/CasinoGames/js-21-card-game" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/WeCook" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/verou-3-end-with-a-bang-we-cook" vcs="Git" />
   </component>
 </project>
